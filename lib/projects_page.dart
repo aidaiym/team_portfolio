@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:team_portfolio/pages/dja.dart';
 
 class ProductCard extends StatefulWidget {
   const ProductCard({Key key}) : super(key: key);
@@ -18,7 +17,7 @@ class _ProductCardState extends State<ProductCard> {
   final List<dynamic> _products = [
     {
       'title': 'Flutter Widgets',
-      'nav': MaterialPageRoute(builder: (_) => SMTH()),
+      // 'nav': MaterialPageRoute(builder: (_) => SMTH()),
       // 'image': Image.asset('assets/images/'),
     },
     {
