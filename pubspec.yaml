@@ -21,13 +21,13 @@ dependencies:
   font_awesome_flutter: ^9.2.0
 
   # audio player
-  audioplayers: ^0.20.1
+  # audioplayers: ^0.20.1
 
-   #api
-  http: ^0.13.3
+  #  #api
+  # http: ^0.13.3
 
-  #geolocation
-  geolocator: ^7.7.1
+  # #geolocation
+  # geolocator: ^7.7.1
 
   
   # The following adds the Cupertino Icons font to your application.

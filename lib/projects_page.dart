@@ -14,55 +14,48 @@ class _ProductCardState extends State<ProductCard> {
 
   CarouselController _carouselController = new CarouselController();
 
-  final List<dynamic> _products = [
+  List<dynamic> _products = [
     {
-      'title': 'Flutter Widgets',
-      // 'nav': MaterialPageRoute(builder: (_) => SMTH()),
-      // 'image': Image.asset('assets/images/'),
+      'title': 'Flutter Widgets App',
+      'image': 'assets/images/flutter.jpg',
     },
     {
       'title': 'Chat App',
-      // 'image': Image.asset('assets/images/'),
+      'image': 'assets/images/chat.jpg',
     },
     {
       'title': 'Weather App',
-      // 'image': Image.asset('assets/images/'),
+      'image': 'assets/images/weather.jpg',
+    },
+    {
+      'title': 'BMI Calculate',
+      'image': 'assets/images/bmi.jpg',
     },
     {
       'title': 'Quizz App',
-      // 'image': Image.asset('assets/images/'),
+      'image': 'assets/images/quiz.jpg',
     },
     {
-      'title': 'BMi Calculate',
-      // 'image': Image.asset('assets/images/'),
+      'title': 'Xylophone App',
+      'image': 'assets/images/xylophone.jpg',
     },
     {
-      'title': 'Dice Game',
-      // 'image': Image.asset('assets/images/'),
+      'title': 'Dice Game App',
+      'image': 'assets/images/dice.jpg',
     },
     {
-      'title': 'Xylophone',
-      // 'image': Image.asset('assets/images/'),
-    },
-    {
-      'title': 'I am rich!',
-      // 'image': Image.asset('assets/images/'),
+      'title': 'Diamond App',
+      'image': 'assets/images/diamond.jpg',
     },
     {
       'title': 'Counter App',
-      // 'image': Image.asset('assets/images/'),
-    },
+      'image': 'assets/images/counter.jpg',
+    }
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: _selectedIndex.length > 0
-          ? FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.arrow_forward_ios),
-            )
-          : null,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -81,88 +74,83 @@ class _ProductCardState extends State<ProductCard> {
         child: CarouselSlider(
             carouselController: _carouselController,
             options: CarouselOptions(
-              height: 450.0,
-              aspectRatio: 16 / 9,
-              viewportFraction: 0.70,
-              enlargeCenterPage: true,
-              pageSnapping: true,
-              onPageChanged: (index, reason) {
-                setState(
-                  () {
+                height: 450.0,
+                aspectRatio: 16 / 9,
+                viewportFraction: 0.70,
+                enlargeCenterPage: true,
+                pageSnapping: true,
+                onPageChanged: (index, reason) {
+                  setState(() {
                     _current = index;
-                  },
-                );
-              },
-            ),
-            items: _products.map(
-              (movie) {
-                return Builder(
-                  builder: (BuildContext context) {
-                    return GestureDetector(
-                      onTap: () {
-                        setState(
-                          () {
-                            if (_selectedIndex == movie) {
-                              _selectedIndex = {};
-                            } else {
-                              _selectedIndex = movie;
-                            }
-                          },
-                        );
-                      },
-                      child: AnimatedContainer(
-                        duration: Duration(milliseconds: 300),
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            border: _selectedIndex == movie
-                                ? Border.all(
-                                    color: Colors.blue.shade500, width: 3)
-                                : null,
-                            boxShadow: _selectedIndex == movie
-                                ? [
-                                    BoxShadow(
-                                        color: Colors.blue.shade100,
-                                        blurRadius: 30,
-                                        offset: Offset(0, 10))
-                                  ]
-                                : [
-                                    BoxShadow(
-                                        color: Colors.grey.withOpacity(0.2),
-                                        blurRadius: 20,
-                                        offset: Offset(0, 5))
-                                  ]),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 320,
-                                margin: EdgeInsets.only(top: 10),
-                                clipBehavior: Clip.hardEdge,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                // child: Image.asset(movie['image'],
-                                //     fit: BoxFit.cover),
+                  });
+                }),
+            items: _products.map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        if (_selectedIndex == i) {
+                          _selectedIndex = {};
+                        } else {
+                          _selectedIndex = i;
+                        }
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: _selectedIndex == i
+                              ? Border.all(
+                                  color: Colors.blue.shade500, width: 3)
+                              : null,
+                          boxShadow: _selectedIndex == i
+                              ? [
+                                  BoxShadow(
+                                      color: Colors.blue.shade100,
+                                      blurRadius: 30,
+                                      offset: Offset(0, 10))
+                                ]
+                              : [
+                                  BoxShadow(
+                                      color: Colors.grey.withOpacity(0.2),
+                                      blurRadius: 20,
+                                      offset: Offset(0, 5))
+                                ]),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 320,
+                              margin: EdgeInsets.only(top: 10),
+                              clipBehavior: Clip.hardEdge,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                movie['title'],
-                                style: TextStyle(
-                                    fontSize: 27, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                              child: Image.asset(i['image'], fit: BoxFit.cover),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              i['title'],
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                          ],
                         ),
                       ),
-                    );
-                  },
-                );
-              },
-            ).toList()),
+                    ),
+                  );
+                },
+              );
+            }).toList()),
       ),
     );
   }
