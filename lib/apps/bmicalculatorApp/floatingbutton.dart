@@ -26,7 +26,7 @@ class _FloatingButtonsState extends State<FloatingButtons> {
         decoration: BoxDecoration(
           color: Color(0xff1D1E33),
           borderRadius: BorderRadius.all(
-            Radius.circular(30),
+            Radius.circular(25),
           ),
         ),
         child: Column(
@@ -49,11 +49,11 @@ class _FloatingButtonsState extends State<FloatingButtons> {
                   backgroundColor: Color(0xff4C4E5D),
                   child: Text(
                     '+',
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    style: TextStyle(color: Colors.white, fontSize: 8),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 8,
                 ),
                 new FloatingActionButton(
                   heroTag: null,
@@ -61,7 +61,7 @@ class _FloatingButtonsState extends State<FloatingButtons> {
                   backgroundColor: Color(0xff4C4E5D),
                   child: Text(
                     '-',
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    style: TextStyle(color: Colors.white, fontSize: 8),
                   ),
                 ),
               ],

@@ -23,9 +23,10 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.purpleAccent.shade400),
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           centerTitle: true,
@@ -45,8 +46,8 @@ class _CounterScreenState extends State<CounterScreen> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(
-                    left: 80.0,
-                    right: 80.0,
+                    left: 70.0,
+                    right: 70.0,
                     top: 10,
                     bottom: 10,
                   ),

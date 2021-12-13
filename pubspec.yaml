@@ -17,22 +17,20 @@ dependencies:
   
   #A carousel slider widget.
   carousel_slider: ^4.0.0
-  # font_awesome icons 
-  font_awesome_flutter: ^9.2.0
+  vertical_card_pager: ^1.5.0
 
   # audio player
-  # audioplayers: ^0.20.1
+  audioplayers: ^0.20.1
 
-  #  #api
-  # http: ^0.13.3
-
-  # #geolocation
-  # geolocator: ^7.7.1
+   #api
+  http: ^0.13.3
+  #geolocation
+  geolocator: ^7.7.1
 
   
   # The following adds the Cupertino Icons font to your application.
   cupertino_icons: ^1.0.2
-
+  font_awesome_flutter: ^9.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -57,16 +55,10 @@ flutter:
   
   #fonts
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
+  fonts:
+    - family: neon
+      fonts:
+        - asset: assets/fonts/neoneon.otf
   #         weight: 700
-  #
+  #         style: italic
  

@@ -23,8 +23,8 @@ class CustomButton extends StatelessWidget {
       onPressed: onTap,
       constraints: constraints ??
           BoxConstraints(
-            minHeight: 60.0,
-            minWidth: 60.0,
+            minHeight: 55.0,
+            minWidth: 55.0,
           ),
       fillColor: buttonColor ?? circleButtonColor,
       shape: shape ?? CircleBorder(),

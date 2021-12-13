@@ -1,14 +1,16 @@
 import 'package:team_portfolio/apps/quizzApp/question.dart';
 
 class QuestionsBrain {
-  // funksiyalar
-
-  int _index = 0; //Private variable, privatnyi peremennyi
+  int _index = 0;
 
   List<Question> questions = [
-    Question(question: 'Бактен Өзгөнгө караштуубу?', answer: false), //0
-    Question(question: 'Баткен районбу?', answer: false), //1
-    Question(question: 'Баткен Кыргызстандабы?', answer: true), //2
+    Question(
+        question: ' Кыргызстандын аймагынын төрттөн үч бөлүгүн тоолор ээлейби?',
+        answer: true),
+    Question(question: 'Ысык-көлдүн аянты 6236 км.кв?', answer: true),
+    Question(question: 'Кыргызстанда 7 область барбы?', answer: true),
+    Question(question: 'Бактен Өзгөнгө караштуубу?', answer: false),
+    Question(question: 'Баткен районбу?', answer: false),
   ];
 
   String getQuestion() {

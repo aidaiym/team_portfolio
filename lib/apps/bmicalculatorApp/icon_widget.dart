@@ -24,7 +24,7 @@ class IconWidget extends StatelessWidget {
         children: [
           FaIcon(
             icon,
-            size: 70.0,
+            size: 60.0,
           ),
           Text(
             text,

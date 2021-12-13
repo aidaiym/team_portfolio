@@ -1,44 +1,49 @@
-// import 'package:audioplayers/audioplayers.dart';
-// import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 
-// void main() => runApp(XylophoneApp());
+class XylophoneApp extends StatefulWidget {
+  const XylophoneApp({Key key}) : super(key: key);
 
-// class XylophoneApp extends StatelessWidget {
-//   void playSound(int soundNumber) {
-//     final player = AudioCache();
-//     player.play('assets/notes/note$soundNumber.wav');
-//   }
+  @override
+  _XylophoneAppState createState() => _XylophoneAppState();
+}
 
-//   Expanded buildKey({Color color, int soundNumber}) {
-//     return Expanded(
-//       child: ElevatedButton(
-//         onPressed: () {
-//           playSound(soundNumber);
-//         },
-//       ),
-//     );
-//   }
+class _XylophoneAppState extends State<XylophoneApp> {
+  AudioCache audioCache = AudioCache();
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         backgroundColor: Colors.black,
-//         body: SafeArea(
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.stretch,
-//             children: <Widget>[
-//               buildKey(color: Colors.red, soundNumber: 1),
-//               buildKey(color: Colors.orange, soundNumber: 2),
-//               buildKey(color: Colors.yellow, soundNumber: 3),
-//               buildKey(color: Colors.green, soundNumber: 4),
-//               buildKey(color: Colors.teal, soundNumber: 5),
-//               buildKey(color: Colors.blue, soundNumber: 6),
-//               buildKey(color: Colors.purple, soundNumber: 7),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          children: [
+            buildContainer(1, kolor: Color(0xffF44336)),
+            buildContainer(2, kolor: Color(0xffF89703)),
+            buildContainer(3, kolor: Color(0xffFEEA3B)),
+            buildContainer(4, kolor: Color(0xff4CAF50)),
+            buildContainer(5, kolor: Color(0xff2D9688)),
+            buildContainer(6, kolor: Color(0xff2996F4)),
+            buildContainer(7, kolor: Color(0xff9B27B1)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void playSound(int noteNumber) {
+    audioCache.play('assets/notes/note$noteNumber.wav');
+  }
+
+  Widget buildContainer(int noteNumber, {@required Color kolor}) {
+    return Expanded(
+      child: Material(
+        color: kolor,
+        child: InkWell(
+          onTap: () {
+            playSound(noteNumber);
+          },
+        ),
+      ),
+    );
+  }
+}

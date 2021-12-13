@@ -70,26 +70,28 @@ class _MenuPageState extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff20232A),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Center(
-            child: Text(
-          "Flutter",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 35.0,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Color(0xff20232A),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Center(
+              child: Text(
+            "Flutter",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 35.0,
+            ),
+          )),
+          leading: GestureDetector(
+            onTap: () {/* Write listener code here */},
+            child: Icon(
+              Icons.menu, color: Colors.black, // add custom icons also
+            ),
           ),
-        )),
-        leading: GestureDetector(
-          onTap: () {/* Write listener code here */},
-          child: Icon(
-            Icons.menu, color: Colors.black, // add custom icons also
-          ),
-        ),
-        actions: <Widget>[
-          Padding(
+          actions: <Widget>[
+            Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
                 onTap: () {},
@@ -98,8 +100,9 @@ class _MenuPageState extends State<MenuPage> {
                   color: Colors.black,
                   size: 26.0,
                 ),
-              )),
-          Padding(
+              ),
+            ),
+            Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
                 onTap: () {},
@@ -107,50 +110,52 @@ class _MenuPageState extends State<MenuPage> {
                   Icons.more_vert,
                   color: Colors.black,
                 ),
-              )),
-        ],
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 4,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ListView(
-                  children: _buildList(),
-                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 30.0),
-                  child: Container(
-                    child: Text(
-                      'F',
-                      style: TextStyle(
-                        color: Color(0xffE4DCD9).withOpacity(0.1),
-                        fontSize: 90,
-                        fontFamily: 'neon',
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+          ],
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              flex: 4,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
                   ),
                 ),
-              ],
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ListView(
+                    children: _buildList(),
+                  ),
+                ),
+              ),
             ),
-          ),
-        ],
+            Expanded(
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Container(
+                      child: Text(
+                        'F',
+                        style: TextStyle(
+                          color: Color(0xffE4DCD9).withOpacity(0.1),
+                          fontSize: 90,
+                          fontFamily: 'neon',
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

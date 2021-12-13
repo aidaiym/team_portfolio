@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: IconWidget(
                                   icon: FontAwesomeIcons.mars,
                                   text: 'MALE',
-                                  allPaddingSize: 30.0,
+                                  allPaddingSize: 25.0,
                                 ),
                               ),
                               const SizedBox(width: 20.0),
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: IconWidget(
                                   icon: FontAwesomeIcons.venus,
                                   text: 'FEMALE',
-                                  allPaddingSize: 30.0,
+                                  allPaddingSize: 25.0,
                                 ),
                               ),
                             ],

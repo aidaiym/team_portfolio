@@ -39,4 +39,4 @@ const kTextFieldInputDecoration = InputDecoration(
 );
 
 const String baseApiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const String apiKey = '51c874e49dc37ecae309a5aad34f104f';
+const String apiKey = '0f52435a448aa80c785463b293dcd2d5';
