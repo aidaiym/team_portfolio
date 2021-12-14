@@ -50,8 +50,6 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                       const SizedBox(height: 15.0),
                       SizedBox(
-                        width: 50,
-                        height: 50,
                         child: DefaultTextStyle(
                           style: const TextStyle(
                             fontSize: 15.0,
@@ -60,8 +58,8 @@ class _MainScreenState extends State<MainScreen> {
                           child: AnimatedTextKit(
                             animatedTexts: [
                               TypewriterAnimatedText(
-                                'Hello,\nWelcome to\n our team portfolio',
-                                speed: const Duration(milliseconds: 500),
+                                'Hello,\nWelcome to\nour team portfolio',
+                                speed: const Duration(milliseconds: 50),
                               ),
                             ],
                             onTap: () {},

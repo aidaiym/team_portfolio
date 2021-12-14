@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:team_portfolio/apps/bmicalculatorApp/home_screen.dart';
 import 'package:team_portfolio/apps/counterApp/counter.dart';
 import 'package:team_portfolio/apps/dicegameApp/dicegame.dart';
@@ -26,47 +27,47 @@ class _ProductCardState extends State<ProductCard> {
   List<dynamic> _products = [
     {
       'title': 'Flutter Widgets App',
-      'image': 'assets/images/flutter.jpg',
+      'image': 'assets/images/flutter_logo.svg',
       'apps': '/first'
     },
     {
       'title': 'Chat App',
-      'image': 'assets/images/chat.jpg',
+      'image': 'assets/images/chat_app.svg',
       'apps': '/second',
     },
     {
       'title': 'Weather App',
-      'image': 'assets/images/weather.jpg',
+      'image': 'assets/images/wheather_app.svg',
       'apps': '/third'
     },
     {
       'title': 'BMI Calculate',
-      'image': 'assets/images/bmi.jpg',
+      'image': 'assets/images/bmi.svg',
       'apps': '/fourth'
     },
     {
       'title': 'Quizz App',
-      'image': 'assets/images/quiz.jpg',
+      'image': 'assets/images/quiz_app.svg',
       'apps': '/fifth',
     },
     {
       'title': 'Xylophone App',
-      'image': 'assets/images/xylophone.jpg',
+      'image': 'assets/images/piano.svg',
       'apps': '/sixth',
     },
     {
       'title': 'Dice Game App',
-      'image': 'assets/images/dice.jpg',
+      'image': 'assets/images/dice_app.svg',
       'apps': '/seventh'
     },
     {
       'title': 'Diamond App',
-      'image': 'assets/images/diamond.jpg',
+      'image': 'assets/images/diamond.svg',
       'apps': '/eighth'
     },
     {
       'title': 'Counter App',
-      'image': 'assets/images/counter.jpg',
+      'image': 'assets/images/counter_app.svg',
       'apps': '/ninth'
     }
   ];
@@ -163,8 +164,14 @@ class _ProductCardState extends State<ProductCard> {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  child: Image.asset(i['image'],
-                                      fit: BoxFit.cover),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(40.0),
+                                    child: SvgPicture.asset(
+                                      i['image'],
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                    ),
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 20,

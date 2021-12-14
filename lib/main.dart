@@ -80,6 +80,6 @@ class _FirstPageState extends State<FirstPage> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => ProductCard()));
+        context, MaterialPageRoute(builder: (context) => Cards()));
   }
 }
