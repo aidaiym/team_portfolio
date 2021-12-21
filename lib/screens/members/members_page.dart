@@ -68,7 +68,7 @@ class _MentorScreenState extends State<MentorScreen> {
       contacts:
           'My contact gmail: daniyarkorp@gmail.com \nMy phone number:+79194116610 ',
       githubLink: ' https://github.com/daniyarkorp',
-      linkedinLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
+      linkedinLink: 'https://www.linkedin.com/in/daniar-akparov-aa7993228/',
       instagramLink: 'https://www.instagram.com/dakparov/',
     ),
     TutList(
@@ -160,24 +160,26 @@ class _MentorScreenState extends State<MentorScreen> {
           'Leadership, Strong Communication, Team Prayer, Accuracy and attention to detail ',
       contacts:
           'My email address: amirhakas934@gmail.com  \n My Contact Number:  +996559020525',
-      githubLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
-      linkedinLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
-      instagramLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
+      githubLink:
+          'https://github.com/AsanbekovAzamatAsanbekoglu/AsanbekovAzamatAsanbekoglu',
+      linkedinLink:
+          'https://www.linkedin.com/in/%D0%B0%D0%B7%D0%B0%D0%BC%D0%B0%D1%82-%D0%B0%D1%81%D0%B0%D0%BD%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2-050755203',
+      instagramLink: 'https://www.instagram.com/azamatasanbekovisch/',
     ),
     TutList(
       fio: "Kylychbek Zholdubaev",
       place: "Kyrgyzstan, Bishkek",
       education: 'Makers Bootcamp , Bishkek ,Kyrgyzstan, May 2021-Sep 2021.',
       date: "Flutter Developer",
-      img: 'assets/images/aza.png',
+      img: 'assets/images/kylych.jpg',
       aboutme:
           'I am a developer with programming languages  JavaScript(basic), Python(medium), Django, Dart(basic), HTML, CSS. I love to learn about new technologies, different systems, and explore various parts of the business.Please, check my Github if you have any queries for collaboration',
       experience: 'Educational Flutter Mobile App.',
       skills:
           'High-quality deliveries and strong communication with programming languages: JavaScript(basic), Python(medium), Django, Dart(basic), HTML, CSS.',
       contacts:
-          'My email address: amirhakas934@gmail.com  \n My Contact Number:  +996703182859',
-      githubLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
+          'My email address: kylychbekjoldubaev@gmail.com  \n My Contact Number:  0703182859',
+      githubLink: 'https://github.com/Joldubaev/KyrgystanBlog',
       linkedinLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
       instagramLink: 'https://www.facebook.com/kylychbek.joldubaev.90',
     ),

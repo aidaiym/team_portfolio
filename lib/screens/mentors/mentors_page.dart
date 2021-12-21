@@ -39,14 +39,14 @@ class _MentorScreenState extends State<MentorScreen> {
         date: "Flutter Developer",
         img: 'assets/images/aza.png',
         descr:
-            'About me: Lorem ipsum dolor sit amet,   consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'),
+            'Azamat Akmatov is a tech enthusiast  based on Turkey. Particularly, he works as a flutter developer in American start- up company. Previously, he worked as professional English teacher for several years and found his passion in being mobile developer with high interest to his job.'),
     TutList(
         fio: "Turat Alybaev",
         place: "Kyrgyzstan, Bishkek",
         date: "Flutter Developer",
         img: 'assets/images/turat.png',
         descr:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'),
+            'Turat Alybaev is  web and flutter developer, based on Bishkek,Kyrgyzstan. Even though, he is working in IT field last 2 years, he confirms that he found his passion in IT field. Currently, he coordinates IT projects and shares knowledge /experience on  his YouTube channel for all who wants to join IT field as well.'),
     TutList(
         fio: "Janybek Jaliev",
         place: "Kyrgyzstan, Bishkek",
@@ -58,9 +58,9 @@ class _MentorScreenState extends State<MentorScreen> {
         fio: "Sadyrbai Zhumadilov ",
         place: "Turkey, Istanbul",
         date: "Flutter Developer",
-        img: 'assets/images/sadir.png',
+        img: 'assets/images/sadyrbai.jpg',
         descr:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'),
+            'Sadyrbai Jumabaev is a junior student in Energy Systems Engineering Department at Erciyes University  in Turkiye. Along with several leadership roles in his university\'s extracurricular  works, he always finds time for coding. This year was very productive for Sadyrbai that he did his internship not only at Solid Electron ,but also  Boomerang company as a Junior Flutter developer.'),
   ];
 
   @override
