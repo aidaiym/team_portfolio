@@ -1,43 +1,61 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton({
     Key key,
-    @required this.onPressed,
-    @required this.buttonBorderColor,
-    @required this.buttonColor,
-    @required this.buttonText,
-    this.buttonHorizontalWidth,
+    this.backgroundColor,
+    this.pressedColor,
+    this.hoveredColor,
+    this.buttonText,
+    this.screenRouteId,
+    this.horizontal,
+    this.vertical,
   }) : super(key: key);
 
-  final VoidCallback onPressed;
-  final Color buttonColor;
-  final Color buttonBorderColor;
+  final Color backgroundColor;
+  final Color pressedColor;
+  final Color hoveredColor;
   final String buttonText;
-  final double buttonHorizontalWidth;
+  final String screenRouteId;
+  final double horizontal;
+  final double vertical;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(buttonColor),
+        elevation: MaterialStateProperty.all<double>(12.0),
+        backgroundColor:
+            MaterialStateProperty.all<Color>(backgroundColor ?? Colors.blue),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25.0),
-            side: BorderSide(color: buttonBorderColor),
+            // side: BorderSide(color: Colors.red),
           ),
         ),
+        overlayColor: MaterialStateProperty.resolveWith<Color>(
+          (Set<MaterialState> states) {
+            if (states.contains(MaterialState.pressed)) {
+              return pressedColor ?? Colors.grey[400];
+            } else if (states.contains(MaterialState.hovered)) {
+              return hoveredColor ?? Colors.grey[200];
+            }
+            return null; // Defer to the widget's default.
+          },
+        ),
       ),
+      onPressed: () {
+        Navigator.pushNamed(context, screenRouteId);
+      },
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: 15.0,
-          horizontal:
-              buttonHorizontalWidth ?? MediaQuery.of(context).size.width * 0.3,
-        ),
+            horizontal: horizontal ?? 120.0, vertical: vertical ?? 18.0),
         child: Text(
-          buttonText,
-          style: TextStyle(fontSize: 12),
+          buttonText ?? 'Login',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18.0,
+          ),
         ),
       ),
     );

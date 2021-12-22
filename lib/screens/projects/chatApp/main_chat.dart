@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:team_portfolio/screens/projects/chatApp/chat_page.dart';
+import 'package:team_portfolio/screens/projects/chatApp/chat_screen.dart';
 import 'package:team_portfolio/screens/projects/chatApp/home_page.dart';
 import 'package:team_portfolio/screens/projects/chatApp/login_page.dart';
 import 'package:team_portfolio/screens/projects/chatApp/register_page.dart';
@@ -18,12 +18,13 @@ class MyChatApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: HomePage.id,
+      initialRoute: HomeScreen.id,
       routes: {
-        HomePage.id: (context) => HomePage(),
-        LoginPage.id: (context) => LoginPage(),
-        RegisterPage.id: (context) => RegisterPage(),
-        ChatPage.id: (context) => ChatPage(),
+        HomeScreen.id: (context) => HomeScreen(),
+        // 'login_screen': (context) => LoginScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegisterScreen.id: (context) => RegisterScreen(),
+        ChatScreenTest.id: (context) => ChatScreenTest(),
       },
     );
   }
