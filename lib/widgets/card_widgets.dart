@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CardWidgets extends StatelessWidget {
   const CardWidgets({this.navigations, this.icons, this.cardTitle, key})
@@ -22,7 +21,7 @@ class CardWidgets extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Container(
             width: 200,
-            decoration: BoxDecoration(
+            decoration:const BoxDecoration(
               color: Color(0xff181A20),
               borderRadius: BorderRadius.all(Radius.circular(10)),
               boxShadow: [
@@ -42,7 +41,7 @@ class CardWidgets extends StatelessWidget {
                   padding: const EdgeInsets.all(18.0),
                   child: Text(
                     cardTitle,
-                    style: TextStyle(color: Colors.white),
+                    style:const TextStyle(color: Colors.white),
                   ),
                 ),
               ],

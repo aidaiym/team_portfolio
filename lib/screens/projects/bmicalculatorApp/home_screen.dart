@@ -108,7 +108,7 @@ class _BMIHomeScreenState extends State<BMIHomeScreen> {
                               child: IconWidget(
                                 icon: FontAwesomeIcons.mars,
                                 text: 'MALE',
-                                allPaddingSize: 25.0,
+                                allPaddingSize: 20.0,
                               ),
                             ),
                             const SizedBox(width: 20.0),
@@ -120,7 +120,7 @@ class _BMIHomeScreenState extends State<BMIHomeScreen> {
                               child: IconWidget(
                                 icon: FontAwesomeIcons.venus,
                                 text: 'FEMALE',
-                                allPaddingSize: 25.0,
+                                allPaddingSize: 20.0,
                               ),
                             ),
                           ],

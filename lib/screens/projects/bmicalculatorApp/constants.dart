@@ -11,7 +11,7 @@ const Color lightGreen = Color(0xff22D875);
 
 //TextStyles
 const TextStyle numberTextStyle = TextStyle(
-  fontSize: 25.0,
+  fontSize: 20.0,
   fontWeight: FontWeight.bold,
 );
 const TextStyle titleTextStyle = TextStyle(

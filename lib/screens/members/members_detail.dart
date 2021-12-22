@@ -5,80 +5,80 @@ import 'package:team_portfolio/widgets/links_widget.dart';
 import 'package:team_portfolio/widgets/members_widget.dart';
 
 class MembersDetail extends StatefulWidget {
-  String fio;
-  String place;
-  String date;
-  String img;
-  String aboutme;
-  String education;
-  String skills;
-  String experience;
-  String contacts;
-  String githubLink;
-  String linkedinLink;
-  String instagramLink;
+  final String fio;
+  final String place;
+  final String date;
+  final String img;
+  final String aboutme;
+  final String education;
+  final String skills;
+  final String experience;
+  final String contacts;
+  final String githubLink;
+  final String linkedinLink;
+  final String instagramLink;
 
-  MembersDetail(
-    this.fio,
-    this.place,
-    this.date,
-    this.img,
-    this.aboutme,
-    this.education,
-    this.skills,
-    this.experience,
-    this.contacts,
-    this.githubLink,
-    this.instagramLink,
-    this.linkedinLink,
-  );
+  MembersDetail({
+    @required this.fio,
+    @required this.place,
+    @required this.date,
+    @required this.img,
+    @required this.aboutme,
+    @required this.education,
+    @required this.skills,
+    @required this.experience,
+    @required this.contacts,
+    @required this.githubLink,
+    @required this.instagramLink,
+    @required this.linkedinLink,
+  });
 
   @override
   _MembersDetailState createState() => _MembersDetailState(
-        fio,
-        place,
-        date,
-        img,
-        aboutme,
-        education,
-        skills,
-        experience,
-        contacts,
-        githubLink,
-        linkedinLink,
-        instagramLink,
+        fio: fio,
+        place: place,
+        date: date,
+        img: img,
+        aboutme: aboutme,
+        education: education,
+        skills: skills,
+        experience: experience,
+        contacts: contacts,
+        githubLink: githubLink,
+        linkedinLink: linkedinLink,
+        instagramLink: instagramLink,
       );
 }
 
 class _MembersDetailState extends State<MembersDetail> {
   final double profileHeight = 140;
   final double coverHeight = 100;
-  String fio;
-  String place;
-  String date;
-  String img;
-  String aboutme;
-  String education;
-  String skills;
-  String experience;
-  String contacts;
-  String githubLink;
-  String linkedinLink;
-  String instagramLink;
-  _MembersDetailState(
-    this.fio,
-    this.place,
-    this.date,
-    this.img,
-    this.aboutme,
-    this.education,
-    this.skills,
-    this.experience,
-    this.contacts,
-    this.githubLink,
-    this.instagramLink,
-    this.linkedinLink,
-  );
+  final String fio;
+  final String place;
+  final String date;
+  final String img;
+  final String aboutme;
+  final String education;
+  final String skills;
+  final String experience;
+  final String contacts;
+  final String githubLink;
+  final String linkedinLink;
+  final String instagramLink;
+  _MembersDetailState({
+    @required this.fio,
+    @required this.place,
+    @required this.date,
+    @required this.img,
+    @required this.aboutme,
+    @required this.education,
+    @required this.skills,
+    @required this.experience,
+    @required this.contacts,
+    @required this.githubLink,
+    @required this.instagramLink,
+    @required this.linkedinLink,
+  });
   @override
   Widget build(BuildContext context) {
     final bottom = profileHeight / 2;
@@ -101,11 +101,13 @@ class _MembersDetailState extends State<MembersDetail> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.arrow_back, color: Colors.white),
+                          icon:
+                              const Icon(Icons.arrow_back, color: Colors.white),
                           onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MembersPage()),
+                              builder: (context) => MembersPage(),
+                            ),
                           ),
                         ),
                       ],
@@ -133,23 +135,24 @@ class _MembersDetailState extends State<MembersDetail> {
                   ),
                   Container(
                     color: Colors.white,
-                    padding: EdgeInsets.symmetric(horizontal: 48.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 48.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 8.0),
                         Text(
                           fio,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 28, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8.0),
                         Text(
                           date,
-                          style: TextStyle(fontSize: 20, color: Colors.black),
+                          style: const TextStyle(
+                              fontSize: 20, color: Colors.black),
                         ),
                         const SizedBox(height: 16.0),
-                        Divider(),
+                        const Divider(),
                         MembersResume(
                           title: "About me",
                           resumetext: aboutme,

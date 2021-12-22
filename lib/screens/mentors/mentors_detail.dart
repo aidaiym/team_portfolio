@@ -2,27 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:team_portfolio/constants/textstyles.dart';
 
 class Detail extends StatefulWidget {
-  String fio;
-  String place;
-  String date;
-  String img;
-  String descr;
+  final String fio;
+  final String place;
+  final String date;
+  final String img;
+  final String descr;
 
-  Detail(this.fio, this.place, this.date, this.img, this.descr);
+  Detail({
+    @required this.fio,
+    @required this.place,
+    @required this.date,
+    @required this.img,
+    @required this.descr,
+  });
 
   @override
-  _DetailState createState() => _DetailState(fio, place, date, img, descr);
+  _DetailState createState() => _DetailState();
 }
 
 class _DetailState extends State<Detail> {
-  String fio;
-  String place;
-  String date;
-  String img;
-  String descr;
-
-  _DetailState(this.fio, this.place, this.date, this.img, this.descr);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +32,9 @@ class _DetailState extends State<Detail> {
             floating: true,
             expandedHeight: MediaQuery.of(context).size.height / 1.2,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(fio, style: ThemeText.sliverTextHeader),
+              title: Text(widget.fio, style: ThemeText.sliverTextHeader),
               centerTitle: true,
-              background: Image.asset(img, fit: BoxFit.cover),
+              background: Image.asset(widget.img, fit: BoxFit.cover),
             ),
           ),
           SliverList(
@@ -47,17 +45,20 @@ class _DetailState extends State<Detail> {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.place, color: Colors.white),
-                      Text(place, style: ThemeText.sliverText)
+                      const Icon(
+                        Icons.place,
+                        color: Colors.white,
+                      ),
+                      Text(widget.place, style: ThemeText.sliverText)
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   Row(
-                    children: [Text(date, style: ThemeText.sliverText)],
+                    children: [Text(widget.date, style: ThemeText.sliverText)],
                   ),
-                  Divider(),
+                  const Divider(),
                   Text(
-                    descr,
+                    widget.descr,
                     style: ThemeText.sliverText,
                   )
                 ],

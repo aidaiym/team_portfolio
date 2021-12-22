@@ -25,7 +25,7 @@ class ExpandedTextButton extends StatelessWidget {
             buttonText,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 28.0,
+              fontSize: 20.0,
             ),
           ),
           style: ButtonStyle(

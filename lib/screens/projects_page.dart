@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:team_portfolio/screens/projects/bmicalculatorApp/home_screen.dart';
+import 'package:team_portfolio/screens/projects/chatApp/main_chat.dart';
 import 'package:team_portfolio/screens/projects/counterApp/counter.dart';
 import 'package:team_portfolio/screens/projects/dicegameApp/dicegame.dart';
 import 'package:team_portfolio/screens/projects/flutter_kyrgyz_app/second_page.dart';
@@ -77,7 +78,7 @@ class _ProductCardState extends State<ProductCard> {
       debugShowCheckedModeBanner: false,
       routes: {
         '/first': (context) => FlutterApp(),
-        '/second': (context) => DiceGame(),
+        '/second': (context) => MyChatApp(),
         '/third': (context) => MyWeatherApp(),
         '/fourth': (context) => BMIScreen(),
         '/fifth': (context) => QuizzApp(),
@@ -92,9 +93,7 @@ class _ProductCardState extends State<ProductCard> {
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(
-                builder: (context) => Cards(),
-              ),
+              MaterialPageRoute(builder: (context) => Cards()),
             ),
           ),
           elevation: 0,

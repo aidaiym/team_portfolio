@@ -1,6 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:team_portfolio/screens/members/members_page.dart';
 import 'package:team_portfolio/screens/mentors/mentors_page.dart';
@@ -9,11 +8,12 @@ import 'package:team_portfolio/screens/projects_page.dart';
 import '../widgets/card_widgets.dart';
 
 class Cards extends StatelessWidget {
+  static const String pushRoute = 'Cards';
   const Cards({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MainScreen(),
     );
@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff20232A),
+      backgroundColor: const Color(0xff20232A),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -60,7 +60,7 @@ class _MainScreenState extends State<MainScreen> {
                             animatedTexts: [
                               TypewriterAnimatedText(
                                 '      Hello,\nWelcome  to\n   our    team \n     portfolio',
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   color: Colors.white,
                                 ),
                                 speed: const Duration(milliseconds: 50),
@@ -89,7 +89,7 @@ class _MainScreenState extends State<MainScreen> {
               CardWidgets(
                 cardTitle: ' Our Projects',
                 icons: SvgPicture.asset('assets/images/projects_icon.svg'),
-                navigations: (context) => ProductCard(),
+                navigations: (context) => const ProductCard(),
               ),
               const SizedBox(height: 20.0),
             ],
